@@ -2,7 +2,7 @@
 
 _Created for the course "Stack of programming technologies" V. N. Karazin Kharkiv National University_
 
-Ruby 3.3.5 module ArrayAverageValue and class ShoppingCart.
+Ruby 3.3.5 demonstration of replacing numbers in a file and url requests through parallel threads.
 
 ---
 
