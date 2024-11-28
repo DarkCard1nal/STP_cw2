@@ -21,10 +21,10 @@ def fetch_url(url) # rubocop:disable Metrics/MethodLength
 end
 
 urls = [
-	'https://jsonplaceholder.typicode.com/posts/1',
-	'https://jsonplaceholder.typicode.com/posts/2',
-	'https://jsonplaceholder.typicode.com/posts/3',
-	'https://jsonplaceholder.typicode.com/posts/4'
+	'https://www.google.com',
+	'https://github.com',
+	'https://discord.com',
+	'https://www.youtube.com'
 ]
 
 threads = urls.map do |url|
