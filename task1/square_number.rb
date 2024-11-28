@@ -52,7 +52,7 @@ module SquareNumber
 	end
 
 	def self.replace_numbers_in_file(input_file_path, output_file_path, numbers_array)
-		file_content = File.read(input_file_path)
+		file_content = File.read(input_file_path).dup
 
 		file_content.gsub!(/[-+]?\d*\.\d+|[-+]?\d+/) do
 			numbers_array.shift.to_s
