@@ -14,7 +14,15 @@ module SquareNumber
 	end
 
 	def self.square_numbers(array)
-		array.map { |num| num**2 }
+		threads = []
+		array.each_with_index do |num, index|
+			threads << Thread.new do
+				array[index] = num**2
+			end
+		end
+
+		threads.each(&:join)
+		array
 	end
 
 	def self.safe_file_write(file_path, content)
