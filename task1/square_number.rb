@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# module SquareNumber
+# module SquareNumber replaces numbers in a file with their squares
 module SquareNumber
 	def self.replace_numbers_with_squares_in_file(input_file_path, output_file_path)
 		numbers = extract_numbers_from_file(input_file_path)
@@ -36,12 +36,13 @@ module SquareNumber
 		"An error occurred while writing to the file: #{e.message}"
 	end
 
-	def self.extract_numbers_from_file(file_path)
+	def self.extract_numbers_from_file(file_path) # rubocop:disable Metrics/MethodLength
 		numbers = []
 		if File.exist?(file_path)
 			File.foreach(file_path) do |line|
 				line.scan(/[-+]?\d*\.\d+|[-+]?\d+/) do |match|
-					numbers << match.to_f
+					number = (match.include?('.') ? match.to_f : match.to_i)
+					numbers << number
 				end
 			end
 			return numbers
