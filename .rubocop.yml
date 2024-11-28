@@ -1,0 +1,9 @@
+AllCops:
+  NewCops: enable
+
+Layout/IndentationStyle:
+  IndentationWidth: 1
+  EnforcedStyle: tabs
+
+Layout/IndentationWidth:
+  Width: 1
